@@ -6,7 +6,7 @@
 |---|---|
 | Dashboard screenshots (5 pages) | [`screenshots/`](screenshots/) |
 | Star schema diagram | [`model/star_schema.png`](model/star_schema.png) |
-| All DAX measures, calculated table and columns | [`dax_measures/dax_measures.md`](dax_measures.md) |
+| All DAX measures, calculated table and columns | [`dax_measures/dax_measures.md`](dax_measures/dax_measures.md) |
 
 ## Pages
 
@@ -34,31 +34,3 @@ Seven tables: three dimensions (`Dim_Country`, `Dim_Date`, `Dim_ProductCategory`
 | 8 | `Dim_Year[Year]` | `Fact_Production[Year]` | Active |
 
 All relationships are one-to-many with a single filter direction. Fact tables are never related to each other. `Fact_Production` is yearly, so it connects to `Dim_Year`, not to the monthly `Dim_Date`.
-
-## Techniques worth a look
-
-- **Shared year table** so one year selection filters monthly facts (prices, trade) and the yearly fact (production) consistently.
-- **Two relationships to one dimension** (reporter active, partner inactive) with `USERELATIONSHIP` in the partner measures.
-- **Self-sufficiency as a measure built from sums**, with explicit rules: structural zeros for categories without a production series, blanks (not zeros) where data ends, blank when more than one category is in context.
-- **Price pass-through** computed by hand in DAX (least-squares slope and correlation over country x category x year), because DAX has no `CORREL` or `LINEST`.
-- **Dynamic text**: change arrows under the KPI numbers, insight sentences and chart titles are measures, so they update with the slicers.
-- **Consistent colour language**: one colour per country (`Country Color`) and one per food category (`Category Color`), never reused for something else.
-
-## How to rebuild the report
-
-1. Run the SQL in [`../03_sql`](../03_sql) and load the six tables (Home > Get data > SQL Server, database `FoodSupplyChain`, Import).
-2. Create `Dim_Year`, the two colour columns and every measure from [`dax_measures.md`](dax_measures.md) (put the measures in a table named `_Measures`).
-3. Build the eight relationships above (the partner link inactive).
-4. Import [`lux_food_theme.json`](lux_food_theme.json) (View > Themes > Browse for themes). Set the canvas to 16:9 (1280 x 720).
-5. Add the sidebar image from [`assets/`](assets/) and build the five pages.
-
-## Checks used to validate the report against SQL
-
-| Check | Expected |
-|---|---|
-| Luxembourg, Dairy & Eggs, 2005, `Total Production (Tonnes)` | 271,134.97 (milk 269,711.00 + eggs 1,423.97) |
-| Belgium, Dairy & Eggs, 2018, `Converted Production (Tonnes)` | 107,844.34 |
-| Fish & Seafood, any country, year up to 2024, `Self-Sufficiency %` | 0.0 |
-| Luxembourg, Oils & Fats, 2018 | blank, not 0 |
-| Self-sufficiency and net trade balance for several rows | equal to SQL queries 1 and 5 |
-| `Consumer Price Index (HICP)`, any country, All Food, 2025 | 100.0 |
