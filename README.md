@@ -2,7 +2,7 @@
 
 A SQL Server + Power BI analysis of how dependent Luxembourg is on food imports from Belgium, France and Germany, and whether that dependency shows up in food prices compared with the rest of the EU. Built from three public datasets (Eurostat prices, Eurostat Comext trade, FAOSTAT production) and modelled as a star schema.
 
-![Overview dashboard](04_powerbi/screenshots/01_overview.png)
+![Overview dashboard](powerbi/screenshots/01_overview.png)
 
 ## Business question
 
