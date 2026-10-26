@@ -22,15 +22,6 @@ All figures come from the dashboard and were re-computed from the model's data. 
 
 These are associations, not proof of cause. Price indices are 2025 = 100 for every country, so they show **growth, not which country is more expensive**.
 
-## Recommendation
-
-For anyone looking at Luxembourg's food supply resilience (a ministry, a retailer, an analyst):
-
-- **Watch supplier concentration first.** About 80% of imports come from three neighbours and 43% of that from France. A disruption in one corridor matters more than the headline import total.
-- **Focus resilience on low-self-sufficiency categories with large volumes**: meat, fruit and vegetables, cereals and bakery. Dairy is a strength, not a risk.
-- **Do not explain price growth through import dependency alone.** The data show no link, and consumer prices follow import prices only partly (slope 0.41).
-- **Close the data gaps before drawing price conclusions**: add national import and producer price data for Luxembourg, and Eurostat price *level* indices to test whether Luxembourg is expensive, which index levels cannot show.
-
 ## Dashboard (5 pages)
 
 | Page | What it shows |
@@ -106,13 +97,6 @@ luxembourg-food-import-analytics/
 └── README.md
 ```
 
-## Reproduce it
-
-1. Download the three raw files as described in [`01_raw/README.md`](raw_data/README.md).
-2. Clean them in Power Query following [`02_power_query/POWER_QUERY_STEPS.md`](02_power_query/POWER_QUERY_STEPS.md) and export `Fact_FoodPrice.csv`, `Fact_Trade.csv`, `Fact_Production.csv`.
-3. In SQL Server Management Studio, import each CSV into its staging table with *Import Flat File*, then run `03_sql/01_schema_and_load.sql` step by step. Expected counts: 36,966 / 165,106 / 531, and 13 converted egg rows.
-4. Run `02_business_questions.sql` to explore, and `03_views_for_powerbi.sql` to create the views.
-5. Rebuild the report from [`powerbi/README.md`](powerbi/README.md).
 
 ## Tools
 
