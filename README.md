@@ -81,19 +81,34 @@ Decisions that shape the numbers:
 ## Repository structure
 
 ```
-luxembourg-food-import-analytics/
-├── 01_raw/                 download instructions (raw files are not stored here)
-├── 02_power_query/         cleaning steps and M formulas
-├── 03_sql/
-│   ├── 01_schema_and_load.sql      create tables, load dimensions, staging, facts, validation
-│   ├── 02_business_questions.sql   the eight analysis queries
-│   └── 03_views_for_powerbi.sql    the same queries as views
-├── 04_powerbi/
-│   ├── dax_measures.md             every measure, table and column
-│   ├── lux_food_theme.json         report theme
-│   ├── model/star_schema.png       data model diagram
-│   ├── screenshots/                one image per page
-│   └── assets/                     sidebar artwork
+Luxembourg-supply-chain-food-analytics/
+├── data/
+│   ├── clean_data/
+│   │   ├── Fact_FoodPrice.csv
+│   │   ├── Fact_Production.csv
+│   │   └── Fact_Trade.csv
+│   └── raw_data/
+│       └── README.md
+├── power_query/
+│   ├── POWER_QUERY_STEPS.md
+├── powerbi/
+│   ├── dax_measures/
+│   │   └── dax_measures.md
+│   ├── model/
+│   │   └── star_schema.png
+│   ├── screenshots/
+│   │   ├── Page_1_Overview.PNG
+│   │   ├── Page_2_Imports.PNG
+│   │   ├── Page_3_Self-Suffiency.PNG
+│   │   ├── Page_4_Price_vs_Dependency....PNG
+│   │   └── Page_5_About.PNG
+│   └── README.md
+├── sql/
+│   ├── 01_schema_and_load.sql
+│   ├── 02_business_questions.sql
+│   └── 03_views_for_powerbi.sql
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
