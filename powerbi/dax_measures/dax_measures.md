@@ -1,6 +1,6 @@
 # DAX measures
 
-All measures of the Power BI report, exported from the final model. Three early draft measures (`Avg Price Index`, `YoY Price Change %`, `Price Gap vs EU Average`) were replaced and are not listed. Create each with **Home > New measure** in a table named `_Measures`.
+All measures of the Power BI report, exported from the final model.
 
 **Conventions**
 
