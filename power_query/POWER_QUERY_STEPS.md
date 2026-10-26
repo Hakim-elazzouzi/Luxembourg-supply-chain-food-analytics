@@ -2,7 +2,6 @@
 
 Goal: turn the long Eurostat and FAOSTAT labels into short codes shared by all three files, add a `ProductGroup` that maps three classification systems to one list, and export three clean fact files: `Fact_FoodPrice.csv`, `Fact_Trade.csv`, `Fact_Production.csv`.
 
-Load each file with **Data > Get Data > From Text/CSV**, check that File Origin is **65001: Unicode (UTF-8)**, then **Transform Data**. Every step below is a *Custom Column* (Add Column > Custom Column) unless it says remove, rename or filter.
 
 ## Food price file (`eurostat_food_price_raw.csv`)
 
@@ -98,7 +97,7 @@ else "UNKNOWN"
 
 ## Dimension tables
 
-The three dimension tables are created by script in [`../03_sql/01_schema_and_load.sql`](../03_sql/01_schema_and_load.sql) (`Dim_Country`, `Dim_ProductCategory`, and a generated `Dim_Date` for 2005-01 to 2026-12, 264 rows).
+The three dimension tables are created by script in [`../sql/01_schema_and_load.sql`](../sql/01_schema_and_load.sql) (`Dim_Country`, `Dim_ProductCategory`, and a generated `Dim_Date` for 2005-01 to 2026-12, 264 rows).
 
 | Key | ProductGroup | Eurostat prices (COICOP) | Comext (HS chapter) | FAOSTAT item |
 |---|---|---|---|---|
@@ -112,5 +111,3 @@ The three dimension tables are created by script in [`../03_sql/01_schema_and_lo
 | 8 | Bread & Bakery | Bread; bakery products; pasta | Milling industry products; preparations of cereals, pastrycooks' products | none |
 | 9 | Coffee & Tea | Coffee substitutes; tea | Coffee, tea, mate and spices | none |
 | 10 | All Food | Food (headline) | none | none |
-
-Next step: [`../03_sql/`](../03_sql/).
