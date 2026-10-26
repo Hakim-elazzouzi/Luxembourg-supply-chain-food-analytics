@@ -1,0 +1,9 @@
+*.pbix
+*.pbit
+*.bak
+01_raw/*.csv
+02_power_query/*.csv
+.~lock*
+.DS_Store
+Thumbs.db
+__pycache__/
