@@ -4,7 +4,7 @@ A SQL Server + Power BI analysis of how dependent Luxembourg is on food imports 
 
 ![Overview dashboard](powerbi/screenshots/Page_1_Overview.PNG)
 
-## Business question
+## Main question
 
 > How dependent is Luxembourg on food imports from Belgium, France and Germany, and does that dependency show up in higher consumer food prices compared with the rest of the EU?
 
