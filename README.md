@@ -39,7 +39,7 @@ For anyone looking at Luxembourg's food supply resilience (a ministry, a retaile
 | **Imports** | Where Luxembourg's food imports come from: map, partner share over time, category mix, partner by category |
 | **Self-sufficiency** | Production vs imports and exports by country and category: map, matrix, supply balance, trend with the 100% line |
 | **Price vs dependency** | Scatter plots of self-sufficiency vs price change and import vs consumer price change, with pass-through, correlation and sample size |
-| **About** | Sources, limitations and credits |
+| **About** | The question, data sources, reading the charts, limitations |
 
 | Imports | Self-sufficiency |
 |---|---|
