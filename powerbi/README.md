@@ -1,6 +1,6 @@
 # Power BI report
 
-> **The `.pbix` file is intentionally not published.** This folder holds everything needed to understand, audit and rebuild the report: screenshots, the data model, every DAX measure, the theme file and the design assets.
+> This folder holds everything needed to understand: screenshots, the data model, every DAX measure.
 
 | Item | File |
 |---|---|
