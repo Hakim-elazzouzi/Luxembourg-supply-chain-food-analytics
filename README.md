@@ -43,9 +43,9 @@ For anyone looking at Luxembourg's food supply resilience (a ministry, a retaile
 
 | Imports | Self-sufficiency |
 |---|---|
-| ![Imports](04_powerbi/screenshots/02_imports.png) | ![Self-sufficiency](04_powerbi/screenshots/03_self_sufficiency.png) |
+| ![Imports](powerbi/screenshots/Page_2_Imports.png) | ![Self-sufficiency](powerbi/screenshots/Page_3_Self-Suffiency.png) |
 | **Price vs dependency** | **About** |
-| ![Price vs dependency](04_powerbi/screenshots/04_price_vs_dependency.png) | ![About](04_powerbi/screenshots/05_about.png) |
+| ![Price vs dependency](powerbi/screenshots/Page_4_Price vs Dependency.png) | ![About](powerbi/screenshots/Page_5_About.png) |
 
 The Power BI file itself is not published. [`04_powerbi/`](04_powerbi/) contains the full DAX, the data model, the theme and the design assets so the report can be audited or rebuilt.
 
