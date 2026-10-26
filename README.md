@@ -54,7 +54,7 @@ Countries: Luxembourg (focus), Belgium, France, Germany, plus the EU-27 average 
 
 ## How it was built
 
-1. **Power Query**: clean and key the three raw files, map every label to a short code and a shared `ProductGroup` ([steps](02_power_query/POWER_QUERY_STEPS.md)).
+1. **Power Query**: clean and key the three raw files, map every label to a short code and a shared `ProductGroup` ([steps](power_query/POWER_QUERY_STEPS.md)).
 2. **SQL Server**: create the star schema, load staging tables, check duplicates, load the facts and validate row counts ([`sql`](sql)). Eight business-question queries and eight matching views.
 3. **Power BI**: model, DAX measures and five pages ([`powerbi`](powerbi)).
 
