@@ -45,9 +45,9 @@ For anyone looking at Luxembourg's food supply resilience (a ministry, a retaile
 |---|---|
 | ![Imports](powerbi/screenshots/Page_2_Imports.png) | ![Self-sufficiency](powerbi/screenshots/Page_3_Self-Suffiency.png) |
 | **Price vs dependency** | **About** |
-| ![Price vs dependency](powerbi/screenshots/Page_4_Price vs Dependency.png) | ![About](powerbi/screenshots/Page_5_About.png) |
+| ![Price vs dependency](powerbi/screenshots/Page_4_Price_vs_Dependency.png) | ![About](powerbi/screenshots/Page_5_About.png) |
 
-The Power BI file itself is not published. [`04_powerbi/`](04_powerbi/) contains the full DAX, the data model, the theme and the design assets so the report can be audited or rebuilt.
+The Power BI file itself is not published. [`powerbi/`](powerbi/) contains the full DAX, the data model, the theme and the design assets so the report can be audited or rebuilt.
 
 ## Data and model
 
@@ -59,13 +59,13 @@ The Power BI file itself is not published. [`04_powerbi/`](04_powerbi/) contains
 
 Countries: Luxembourg (focus), Belgium, France, Germany, plus the EU-27 average as a reference. Ten product groups reconcile three classification systems (COICOP, HS chapters, FAOSTAT items) into one list.
 
-![Star schema](04_powerbi/model/star_schema.png)
+![Star schema](powerbi/model/star_schema.png)
 
 ## How it was built
 
 1. **Power Query**: clean and key the three raw files, map every label to a short code and a shared `ProductGroup` ([steps](02_power_query/POWER_QUERY_STEPS.md)).
-2. **SQL Server**: create the star schema, load staging tables, check duplicates, load the facts and validate row counts ([`03_sql`](03_sql)). Eight business-question queries and eight matching views.
-3. **Power BI**: model, DAX measures and five pages ([`04_powerbi`](04_powerbi)).
+2. **SQL Server**: create the star schema, load staging tables, check duplicates, load the facts and validate row counts ([`sql`](sql)). Eight business-question queries and eight matching views.
+3. **Power BI**: model, DAX measures and five pages ([`powerbi`](powerbi)).
 
 Decisions that shape the numbers:
 
@@ -108,11 +108,11 @@ luxembourg-food-import-analytics/
 
 ## Reproduce it
 
-1. Download the three raw files as described in [`01_raw/README.md`](01_raw/README.md).
+1. Download the three raw files as described in [`01_raw/README.md`](raw_data/README.md).
 2. Clean them in Power Query following [`02_power_query/POWER_QUERY_STEPS.md`](02_power_query/POWER_QUERY_STEPS.md) and export `Fact_FoodPrice.csv`, `Fact_Trade.csv`, `Fact_Production.csv`.
 3. In SQL Server Management Studio, import each CSV into its staging table with *Import Flat File*, then run `03_sql/01_schema_and_load.sql` step by step. Expected counts: 36,966 / 165,106 / 531, and 13 converted egg rows.
 4. Run `02_business_questions.sql` to explore, and `03_views_for_powerbi.sql` to create the views.
-5. Rebuild the report from [`04_powerbi/README.md`](04_powerbi/README.md).
+5. Rebuild the report from [`powerbi/README.md`](powerbi/README.md).
 
 ## Tools
 
