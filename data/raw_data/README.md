@@ -11,5 +11,5 @@ The three source files are public but large (the trade file is about 45 MB), so 
 ## Selection tips
 
 - **FAOSTAT:** aggregates (Vegetables Primary, Fruit Primary, Cereals primary, Oilcrops, Meat Total) are on the *Items Aggregated* tab; milk and eggs are on the *Items* tab. Always tick the **"+ (Total)"** line, never the parent "> (List)". Hen eggs come in two units (tonnes and thousands of eggs); the load script in `03_sql` resolves this.
-- **Comext:** keep frequency to **Monthly only** (mixing monthly and annual creates duplicate rows) and drop the `SUPPLEMENTARY_QUANTITY` indicator (its unit differs between chapters). The Data Browser's 750,000-cell ceiling forces several narrowing rounds. After downloading, check `MIN(TIME_PERIOD)` and `MAX(TIME_PERIOD)` (2005-01 and 2026-06 for this project).
+- **Comext:** keeping frequency to **Monthly only** (mixing monthly and annual creates duplicate rows) and droping the `SUPPLEMENTARY_QUANTITY` indicator (its unit differs between chapters). The Data Browser's 750,000-cell ceiling forces several narrowing rounds. After downloading, checking `MIN(TIME_PERIOD)` and `MAX(TIME_PERIOD)` (2005-01 and 2026-06 for this project).
 - **Eurostat prices:** the base year is **2025 = 100**, not 2015.
