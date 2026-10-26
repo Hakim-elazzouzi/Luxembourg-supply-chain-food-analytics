@@ -34,7 +34,7 @@ These are associations, not proof of cause. Price indices are 2025 = 100 for eve
 
 | Imports | Self-sufficiency |
 |---|---|
-| ![Imports](powerbi/screenshots/Page_2_Imports.PNG) | ![Self-sufficiency](powerbi/screenshots/Page_3_Self-Suffiency.PNG) |
+| ![Imports](powerbi/screenshots/Page_2_Imports.PNG) | ![Self-sufficiency](powerbi/screenshots/Page_3_Self-Sufficiency.PNG) |
 | **Price vs dependency** | **About** |
 | ![Price vs dependency](powerbi/screenshots/Page_4_Price_vs_Dependency.PNG) | ![About](powerbi/screenshots/Page_5_About.PNG) |
 
