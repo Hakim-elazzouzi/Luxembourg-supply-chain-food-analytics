@@ -6,9 +6,7 @@
 |---|---|
 | Dashboard screenshots (5 pages) | [`screenshots/`](screenshots/) |
 | Star schema diagram | [`model/star_schema.png`](model/star_schema.png) |
-| All DAX measures, calculated table and columns | [`dax_measures.md`](dax_measures.md) |
-| Report theme (colours, fonts, card style) | [`lux_food_theme.json`](lux_food_theme.json) |
-| Sidebar artwork (two colour options, PNG and editable SVG) | [`assets/`](assets/) |
+| All DAX measures, calculated table and columns | [`dax_measures/dax_measures.md`](dax_measures.md) |
 
 ## Pages
 
